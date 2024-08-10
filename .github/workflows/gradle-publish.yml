@@ -37,6 +37,8 @@ on:
         required: false
       MAVEN_PASSWORD:
         required: false
+      MAVEN_URL_RELEASE:
+        required: false
       
       SONATYPE_USER:
         required: false
@@ -174,6 +176,7 @@ jobs:
           SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
           GPP_KEY: ${{ secrets.GPP_KEY }}
           GPP_SECRET: ${{ secrets.GPP_SECRET }}
+          MAVEN_URL_RELEASE: ${{ secrets.MAVEN_URL_RELEASE }}
 
   notify-build-end:
     name: Build notifications (end)
